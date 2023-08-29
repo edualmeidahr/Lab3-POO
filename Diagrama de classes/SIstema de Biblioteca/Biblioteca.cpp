@@ -3,23 +3,21 @@
 using namespace std;
 
 
-
-
-noLista * Biblioteca::inicializarLista(){
-    tam =0;
-    return NULL;
+Biblioteca::Biblioteca(){
+    L=NULL;
+    L.tam =0;
 }
 
-void Biblioteca::adicionarLivro(noLista *&l, Livros livros)
+void Biblioteca::adicionarLivro( Livros livros)
 {
     noLista *novo = new noLista;
     novo->livros    = livros;
     novo->prox    = l;
     l             = novo;
-    tam++;
+    L.tam++;
 }
 
-Livros Biblioteca::buscarLivro(noLista *l, string titulo, Autor autor){
+Livros Biblioteca::buscarLivro( string titulo, Autor autor){
 
 while ( L.tam < tam)
     {
@@ -29,8 +27,8 @@ while ( L.tam < tam)
     }
 }
 
-void Biblioteca:: mostrarLivros(noLista *l){
-    while (L.tam < tam){
+void Biblioteca:: mostrarLivros(){
+    while (L.tam){
         cout<< l->livros << "\n";
         l = l->prox;
     }

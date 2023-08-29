@@ -5,24 +5,24 @@
 #include "Autor.hpp"
 using namespace std;
 
-    
-
-class Biblioteca 
-{
-    private:
-        listaLivro L;
-
-    public:
-    typedef struct noLista
+   typedef struct noLista
     {
         Livros  livro;
         noLista *prox;
         int tam;
-    } listaLivro;
-    
+    } listaLivro;   
+
+class Biblioteca 
+{
+    private:
+      
+
+        listaLivro L;
+
+    public:
      noLista *inicializarLista();
-     void adicionarLivro(noLista *&L, Livros livros);
-     Livros buscarLivro(noLista *L,string titulo, Autor autor);
-     void mostrarLivros(noLista *L);
+     void adicionarLivro(Livros livros);
+     Livros buscarLivro(string titulo, Autor autor);
+     void mostrarLivros();
 }
 #endif
