@@ -2,19 +2,23 @@
 #define _BIBLIOTECA_HPP
 #include <string>
 #include "Livros.hpp"
-
+using namespace std;
 
 
 class Biblioteca 
 {
 
     private:
-        const int quantLivros = 50;
-        Livros livros;
-        Biblioteca[quantLivros];
-
+        typedef struct noLista
+        {
+          Livros  livro;
+          noLista *prox;
+          int tam;
+        } listaLivro;
     public:
-     void adicionarLivro(livros)
-
-
+     noLista *inicializarLista();
+     void adicionarLivro(noLista *&l, Livros livros);
+     Livros buscarLivro(noLista *l,string titulo, Autor autor);
+     void mostrarLivros();
 }
+#endif

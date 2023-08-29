@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Autor.hpp"
-
+using namespace std;
 void Autor::setnomeAutor(string nome){
     this->nomeAutor = nome;
 }

@@ -2,7 +2,7 @@
 #define _LIVROS_HPP
 #include <string>
 #include "Autor.hpp"
-
+using namespace std;
 class Livros 
 {
 private:

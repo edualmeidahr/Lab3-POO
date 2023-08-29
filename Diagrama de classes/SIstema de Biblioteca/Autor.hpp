@@ -1,7 +1,7 @@
 #ifndef _AUTOR_HPP
 #define _AUTOR_HPP
 #include <string>
-
+using namespace std;
 
 class Autor
 {

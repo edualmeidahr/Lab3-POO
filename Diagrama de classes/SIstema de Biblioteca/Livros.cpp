@@ -1,6 +1,6 @@
 #include "Pessoa.hpp"
 #include <iostream>
-
+using namespace std;
 void Livros::setTitulo(string titulo;){
     this->titulo = titulo;
 }
