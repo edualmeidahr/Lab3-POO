@@ -21,11 +21,17 @@ void Biblioteca::adicionarLivro(noLista *&l, Livros livros)
 
 Livros Biblioteca::buscarLivro(noLista *l, string titulo, Autor autor){
 
-while ( listaLivro< tam)
+while ( L.tam < tam)
     {
-        if(getTitulo() == titulo && getAutor() == autor)
+        if(l.livro.getTitulo() == titulo && l.livro.getAutor() == autor)
         cout << l->livros << "\n";
         l = l->prox;
     }
+}
 
+void Biblioteca:: mostrarLivros(noLista *l){
+    while (L.tam < tam){
+        cout<< l->livros << "\n";
+        l = l->prox;
+    }
 }
