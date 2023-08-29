@@ -2,6 +2,7 @@
 #define _AUTOR_HPP
 #include <string>
 
+
 class Autor
 {
 private:
@@ -10,10 +11,10 @@ string dataNascimento;
 
 public:
 
-void setnome(string nome);
-string getnome();
+void setnomeAutor(string nome);
+string getnomeAutor();
 
-void setdata(string data);
-string getdata();
+void setdataNascimento(string data);
+string getdataNascimento();
 }
 #endif
