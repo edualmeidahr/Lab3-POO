@@ -1,20 +1,18 @@
-#ifndef _AUTOR_HPP
-#define _AUTOR_HPP
-#include <string>
-using namespace std;
+#ifndef AUTOR_HPP
+#define AUTOR_HPP
 
-class Autor
-{
+#include <string>
+
+class Autor {
 private:
-string nomeAutor;
-string dataNascimento;
+    std::string nomeAutor;
+    std::string dataNascimento;
 
 public:
+    void setNomeAutor(const std::string& nome);
+    std::string getNomeAutor() const;
 
-void setnomeAutor(string nome);
-string getnomeAutor();
-
-void setdataNascimento(string data);
-string getdataNascimento();
-}
+    void setDataNascimento(const std::string& data);
+    std::string getDataNascimento() const;
+};
 #endif

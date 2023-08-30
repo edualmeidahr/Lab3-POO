@@ -1,18 +1,18 @@
 #include <iostream>
 #include "Autor.hpp"
-using namespace std;
-void Autor::setnomeAutor(string nome){
+
+void Autor::setNomeAutor(const std::string& nome) {
     this->nomeAutor = nome;
 }
 
-string Autor::getnomeAutor(){
+std::string Autor::getNomeAutor() const {
     return this->nomeAutor;
 }
 
-void Autor::setdataNascimento(string data){
+void Autor::setDataNascimento(const std::string& data) {
     this->dataNascimento = data;
 }
 
-string Autor::getdataNascimento(){
+std::string Autor::getDataNascimento() const {
     return this->dataNascimento;
 }

@@ -1,26 +1,27 @@
-#ifndef _LIVROS_HPP
-#define _LIVROS_HPP
+#ifndef LIVROS_HPP
+#define LIVROS_HPP
+
 #include <string>
 #include "Autor.hpp"
-using namespace std;
-class Livros 
-{
-private:
 
-string titulo;
-string isbn;
-Autor autor;
+class Livros {
+private:
+    std::string titulo;
+    std::string isbn;
+    Autor autor;
 
 public:
+    Livros() = default;  // Construtor padrão
+    Livros(const std::string& titulo, const std::string& isbn, const Autor& autor);
+    
+    void setTitulo(const std::string& titulo);
+    std::string getTitulo() const;
 
-void setTitulo(string titulo);
-string getTitulo();
+    void setISBN(const std::string& isbn);
+    std::string getISBN() const;
 
-void setISBN(string isbn);
-string getISBN();
-
-void setAutor(Autor autor);
-Autor getAutor();
-}
+    void setAutor(const Autor& autor);
+    Autor getAutor() const;
+};
 
 #endif

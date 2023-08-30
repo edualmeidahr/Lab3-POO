@@ -1,35 +1,26 @@
-#include <iostream>
 #include "Biblioteca.hpp"
-using namespace std;
+#include "Autor.hpp" // Substitua "autor.hpp" pelo nome do arquivo de cabeçalho da classe Autor
+#include "Livros.hpp" // Substitua "livro.hpp" pelo nome do arquivo de cabeçalho da classe Livro
 
-
-Biblioteca::Biblioteca(){
-    L=NULL;
-    L.tam =0;
+void Biblioteca::adicionarLivro(const Livros &livro) {
+  listaLivros.push_back(livro);
+  std::cout<<"LIVRO ADICIONADO!"<< std::endl;
 }
 
-void Biblioteca::adicionarLivro( Livros livros)
-{
-    noLista *novo = new noLista;
-    novo->livros    = livros;
-    novo->prox    = l;
-    l             = novo;
-    L.tam++;
+void Biblioteca::mostrarLivros() const {
+  for (const Livros &livro : listaLivros) {
+    std::cout << "Título: " << livro.getTitulo()
+              << ", Autor: " << livro.getAutor().getNomeAutor() << std::endl;
+  }
 }
 
-Livros Biblioteca::buscarLivro( string titulo, Autor autor){
-
-while ( L.tam < tam)
-    {
-        if(l.livro.getTitulo() == titulo && l.livro.getAutor() == autor)
-        cout << l->livros << "\n";
-        l = l->prox;
+void Biblioteca::buscarLivro(std::string titulo, Autor autor) {
+  for (const Livros &livro : listaLivros) {
+    if (livro.getTitulo() == titulo && livro.getAutor().getNomeAutor() == autor.getNomeAutor()){
+      std:: cout<< "Livro encontrado!!\n";
+      std::cout << "Titulo:" + livro.getTitulo() + "\nAutor:" + autor.getNomeAutor();      
+    }else{
+      std::cout<<"Livro não encontrado!\n";
+    }     
     }
-}
-
-void Biblioteca:: mostrarLivros(){
-    while (L.tam){
-        cout<< l->livros << "\n";
-        l = l->prox;
-    }
-}
+  }

@@ -1,25 +1,26 @@
-#include "Pessoa.hpp"
+#include "Livros.hpp""
 #include <iostream>
-using namespace std;
-void Livros::setTitulo(string titulo;){
+
+void Livros::setTitulo(const std::string& titulo) {
     this->titulo = titulo;
 }
 
-string Livros::getTitulo(){
+std::string Livros::getTitulo() const {
     return this->titulo;
 }
 
-void Livros::setISBN(string isbn){
+void Livros::setISBN(const std::string& isbn) {
     this->isbn = isbn;
 }
 
-string Livros::getISBN(){
+std::string Livros::getISBN() const {
     return this->isbn;
 }
 
-void Livro::setAutor(Autor autor){
+void Livros::setAutor(const Autor& autor) {
     this->autor = autor;
 }
-Autor Livro::getAutor(){
-    return this->Autor;
+
+Autor Livros::getAutor() const {
+    return this->autor;
 }

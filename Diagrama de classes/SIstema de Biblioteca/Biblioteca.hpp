@@ -1,28 +1,22 @@
-#ifndef _BIBLIOTECA_HPP
-#define _BIBLIOTECA_HPP
+#ifndef BIBLIOTECA_HPP
+#define BIBLIOTECA_HPP
+
+#include <list>
 #include <string>
-#include "Livros.hpp"
-#include "Autor.hpp"
-using namespace std;
+#include <iostream>
 
-   typedef struct noLista
-    {
-        Livros  livro;
-        noLista *prox;
-        int tam;
-    } listaLivro;   
 
-class Biblioteca 
-{
-    private:
-      
+class Autor;
+class Livros;
 
-        listaLivro L;
+class Biblioteca {
+public:
+    void adicionarLivro(const Livros &livro);
+    void mostrarLivros() const;
+    void buscarLivro(std:: string titulo, Autor autor);
 
-    public:
-     noLista *inicializarLista();
-     void adicionarLivro(Livros livros);
-     Livros buscarLivro(string titulo, Autor autor);
-     void mostrarLivros();
-}
-#endif
+private:
+    std::list<Livros> listaLivros;
+};
+
+#endif 
